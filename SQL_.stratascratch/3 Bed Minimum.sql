@@ -6,4 +6,5 @@ select  DISTINCT
 from airbnb_search_details
 WHERE neighbourhood is not null
 GROUP BY neighbourhood
+HAVING SUM(beds) >= 3
 ORDER BY avg_bed DESC;
